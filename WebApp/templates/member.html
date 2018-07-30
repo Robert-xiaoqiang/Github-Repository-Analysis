@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Brief Intro to Proj</title>
+	<style>
+     body {
+        padding-top: 50px;
+      } 
+	.feature-divider {
+        margin: 40px 0;
+    }
+
+    .feature {
+        padding: 30px 0;
+    }
+
+    .feature-heading {
+        font-size: 50px;
+        color: #2a6496;
+    }
+
+    .feature-heading .text-muted {
+        font-size: 28px;
+    }
+     </style>
+	<link href="{{ url_for('static', filename = 'bootstrap3/css/bootstrap.min.css') }}" rel="stylesheet"/>
+  <link rel='icon' href="{{ url_for('static', filename = 'images/logo.ico')  }}" type='image/x-ico' />
+</head>
+<body>
+	<nav class = "navbar navbar-default navbar-fixed-top navbar-inverse" role = "navigation">
+      <div class = "container">
+        <div class = "navbar-header">
+          <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+            <span class = "sr-only">Toggle navigation</span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+          </button>
+          <a class = "navbar-brand" href = "{{ url_for('index', _external=True) }}">Project Presentation</a>
+        </div>
+        <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+          <ul class = "nav navbar-nav">
+            <li><a href = "{{ url_for('member', _external=True) }}">Member</a></li>
+            <li class = "dropdown">
+              <a href = "{{ url_for('introduction', _external=True) }}" class = "dropdown-toggle" data-toggle = "dropdown">Brief Intro to Proj<span class = "caret"></span></a>
+              <ul class = "dropdown-menu" role = "menu">
+                <li><a href = "{{ url_for('introduction', _external=True) }}">数据来源</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">分析方式</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">工具知识</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">预期效果</a></li>
+              </ul>
+            </li> 
+            <li><a href = "{{ url_for('achievements', _external=True) }}">Achievements</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+	<ul class = "nav nav-tabs" role = "tablist">
+		<li class = "active"><a href = "#home" role = "tab" data-toggle = "tab">Home</a></li>
+		<li><a href = "#info" role = "tab" data-toggle = "tab">成员信息</a></li>
+		<li><a href = "#contact" role = "tab" data-toggle = "tab">联系我们</a></li>
+	</ul>
+	<div class= "tab-content">
+		<div class = "tab-pane active" id = "home">
+			<div class = "row feature">
+				<div class = "col-md-7">
+					<h2 class = "feature-heading" align = "center">Home<span class = "text-muted"><hr/>Python 是世界上最好的语言</span></h2><hr/>
+					<h2 align = "center">项目名称</h2>
+					<p align = "center"> IT行业的热点领域的变化分析与可视化 </p>
+					<p align = "center"> 基于Github数据集的IT从业者的每天最佳工作时间的片面统计分析 </p>
+				</div>
+				<div class="col-md-5">     
+                </div>
+			</div>
+		</div>
+		<div class = "tab-pane" id = "info">
+			<div class = "row feature">
+				<div class = "col-md-7">
+					<h2 class = "feature-heading" align = "center">成员信息<span class = "text-muted"><hr/>姓名: 王晓强</span></h2><hr/>
+					<p align = "center">学号: 3160101819</p>
+					<p align = "center">专业: 计算机科学与技术</p>
+				</div>
+				<div class="col-md-5">     
+                </div>
+			</div>
+		</div>
+		<div class = "tab-pane" id = "contact">
+			<div class = "row feature">
+				<div class = "col-md-7">
+					<h2 class = "feature-heading" align = "center">联系我们<span class = "text-muted"><hr/>联系我</span></h2><hr/>
+					<p align = "center"> 3160101819@zju.edu.cn </p>
+				</div>
+				<div class="col-md-5">     
+                </div>
+			</div>
+		</div>			
+	</div>
+	<script src="{{ url_for('static', filename = 'JQuery/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'bootstrap3/js/bootstrap.min.js') }}"></script>
+</body>
+</html>

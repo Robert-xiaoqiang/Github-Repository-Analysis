@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Project Presentation</title>
+    <link href="{{ url_for('static', filename = 'bootstrap3/css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <link rel='icon' href="{{ url_for('static', filename = 'images/logo.ico')  }}" type='image/x-ico' />
+    <style>
+      body {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        color: #5a5a5a;
+      	}
+        .feature-divider {
+            margin: 40px 0;
+      	}
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #444;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        } 
+    </style>
+  </head>
+ <body background = "{{ url_for('static', filename = 'images/bgPicture.jpg') }}">
+    <nav class = "navbar navbar-default navbar-fixed-top navbar-inverse" role = "navigation">
+      <div class = "container">
+        <div class = "navbar-header">
+          <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+            <span class = "sr-only">Toggle navigation</span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+          </button>
+          <a class = "navbar-brand" href = "{{ url_for('index', _external=True) }}">Project Presentation</a>
+        </div>
+        <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+          <ul class = "nav navbar-nav">
+            <li><a href = "{{ url_for('member', _external=True) }}">Member</a></li>
+            <li class = "dropdown">
+              <a href = "{{ url_for('introduction', _external=True) }}" class = "dropdown-toggle" data-toggle = "dropdown">Brief Intro to Proj<span class = "caret"></span></a>
+              <ul class = "dropdown-menu" role = "menu">
+                <li><a href = "{{ url_for('introduction', _external=True) }}">数据来源</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">分析方式</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">工具知识</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">预期效果</a></li>
+              </ul>
+            </li> 
+            <li><a href = "{{ url_for('achievements', _external=True) }}">Achievements</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+    <div id="ad0-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#ad0-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#ad0-carousel" data-slide-to="1"></li>
+            <li data-target="#ad0-carousel" data-slide-to="2"></li>
+            <li data-target="#ad0-carousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+              <!-- <img src="images/bgPicture.jgp" alt="5 slide"> -->
+                <div class="container">
+                  <div class="carousel-caption">
+                      <div class = "row feature">
+                        <div class = "col-md-7">
+                          <h2 class = "feature-heading">数据来源<span class = "text-muted"><hr/>Project 起点</span></h2>
+                          <p> Github代码托管平台 </p>
+                          <p> 知乎网络问答社区 </p>
+                        </div>
+                      </div>
+                  </div>
+                 </div> 
+            </div> 
+            <div class="item">
+                <div class="container">
+                  <div class="carousel-caption">
+                      <div class = "row feature">
+                        <div class = "col-md-7">
+                          <h2 class = "feature-heading">分析方式<span class = "text-muted"><hr/>Project 可行性</span></h2>
+                          <p> Github使用提供的API接口https://developer.github.com/v3/, 分析方式为starred数较高的仓库作为数据集,   采集要点是: 开发语言, 简介词条, 和频繁commit的时间(精确到小时); </p>
+                          <p> 知乎平台的数据分析, 利用知乎便于进行爬虫的特点, 采用爬取关注, 收藏度较高的作为数据集, 采集要点是: 知乎提供的标
+                          签分类, 回答者的公共信息, 回答者的关注话题 等; </p>
+                        </div>                            
+                      </div>
+                  </div>
+                 </div> 
+            </div>
+            <div class="item">
+                <div class="container">
+                  <div class="carousel-caption">
+                      <div class = "row feature">
+                        <div class = "col-md-7">
+                          <h2 class = "feature-heading">工具知识<span class = "text-muted"><hr/>Project 核心</span></h2>
+                          <p> 数据获取: Srapy, BeautifulSoup, 正则表达式 API响应解析: requests</p>
+                          <p> 数据分析与可视化: NLTK, Matplotlib, Seaborn, Pandas </p>
+                          <p> Web应用程序: flask框架, 数据库, html, css等基本知识</p>
+                        </div>                            
+                      </div>
+                  </div>
+                 </div> 
+            </div>
+            <div class="item">
+                <div class="container">
+                  <div class="carousel-caption">
+                      <div class = "row feature">
+                        <div class = "col-md-7">
+                          <h2 class = "feature-heading">预期效果<span class = "text-muted"><hr/>Project 目标</span></h2>
+                          <p> 对于IT行业的热点领域, 结果是若干表格, 表格的分类有:
+                                    当前热度排序, 某领域的发展趋势, 领域的“替代品’’, “互补品”分析等: </p>
+                          <p>  对于IT从业者的最佳工作时间是利用Github数据的简单分析, 如同一repository的不同时间的commit, 同一时间的不同repository的commit等; </p>
+                        </div>                            
+                      </div>
+                  </div>
+                 </div> 
+            </div>   
+        </div>
+        <a class="left carousel-control" href="#ad0-carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only"> 上一页 </span>
+        </a>
+        <a class="right carousel-control" href="#ad0-carousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only"> 下一页 </span>
+        </a>
+    </div>
+    <script src="{{ url_for('static', filename = 'JQuery/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'bootstrap3/js/bootstrap.min.js') }}"></script>
+  </body>
+</html>

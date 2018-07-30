@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Project Presentation</title>
+    <link href="{{ url_for('static', filename = 'bootstrap3/css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <link rel='icon' href="{{ url_for('static', filename = 'images/logo.ico')  }}" type='image/x-ico' />
+    <style>
+      body {
+        padding-top: 50px;
+      } 
+      .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+      }
+
+      .carousel .item {
+          height: 500px;
+          background-color: #444;
+      }
+
+      .carousel .item img {
+          width: 100%;
+      }
+
+      .carousel-caption {
+          z-index: 10;
+      }
+
+      .carousel-caption p {
+          margin-bottom: 150px;
+          font-size: 16px;
+          line-height: 1.8;
+      } 
+    </style>
+  </head>
+  <body>
+    <nav class = "navbar navbar-default navbar-fixed-top navbar-inverse" role = "navigation">
+      <div class = "container">
+        <div class = "navbar-header">
+          <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+            <span class = "sr-only">Toggle navigation</span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+          </button>
+          <a class = "navbar-brand" href = "{{ url_for('index', _external=True) }}">Project Presentation</a>
+        </div>
+        <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+          <ul class = "nav navbar-nav">
+            <li><a href = "{{ url_for('member', _external=True) }}">Member</a></li>
+            <li class = "dropdown">
+              <a href = "{{ url_for('introduction', _external=True) }}" class = "dropdown-toggle" data-toggle = "dropdown">Brief Intro to Proj<span class = "caret"></span></a>
+              <ul class = "dropdown-menu" role = "menu">
+                <li><a href = "{{ url_for('introduction', _external=True) }}">数据来源</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">分析方式</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">工具知识</a></li>
+                <li><a href = "{{ url_for('introduction', _external=True) }}">预期效果</a></li>
+              </ul>
+            </li> 
+            <li><a href = "{{ url_for('achievements', _external=True) }}">Achievements</a></li>
+          </ul>
+        </div>        
+      </div>
+    </nav>
+    <ul class = "nav nav-tabs" role = "tablist">
+    <li class = "active"><a href = "#rl0" role = "tab" data-toggle = "tab">仓库数-语言0</a></li>
+    <li><a href = "#sl0" role = "tab" data-toggle = "tab">star数-语言0</a></li>
+    <li><a href = "#rl1" role = "tab" data-toggle = "tab">仓库数-语言1</a></li>
+    <li><a href = "#sl1" role = "tab" data-toggle = "tab">star数-语言1</a></li>
+    <li><a href = "#ct" role = "tab" data-toggle = "tab">commit数-时间</a></li>
+    <li><a href = "#pt" role = "tab" data-toggle = "tab">Python tags</a></li>
+  </ul>
+  <div class= "tab-content">
+    <div class = "tab-pane active" id = "rl0">
+      <div class = "row feature">
+          <embed src="{{ url_for('static', filename = 'results/count_language0.svg') }}" type="image/svg+xml" width="1345" height="730" />
+      </div>
+    </div>
+     <div class = "tab-pane active" id = "sl0">
+      <div class = "row feature">
+        <embed src="{{ url_for('static', filename = 'results/count_language_stars0.svg') }}" type="image/svg+xml" width="1345" height="730" />
+      </div>
+    </div>
+    <div class = "tab-pane active" id = "rl1">
+      <div class = "row feature">
+        <div class = "row feature">
+          <embed src="{{ url_for('static', filename = 'results/count_language1.svg') }}" type="image/svg+xml" width="1345" height="730" />
+      </div>
+      </div>
+    </div>
+    <div class = "tab-pane active" id = "sl1">
+      <div class = "row feature">
+        <embed src="{{ url_for('static', filename = 'results/count_language_stars1.svg') }}" type="image/svg+xml" width="1345" height="730" />
+      </div>
+    </div>
+    <div class = "tab-pane active" id = "ct">
+      <div class = "row feature">
+        <embed src="{{ url_for('static', filename = 'results/count_time.svg') }}" type="image/svg+xml" width="1345" height="730" />
+      </div>
+    </div>
+    <div class = "tab-pane active" id = "pt">
+      <div class = "row feature">
+        <img src="{{ url_for('static', filename = 'results/tag.png') }}" width="1300" height="730" />
+      </div>
+    </div>
+  </div>  
+    <script src="{{ url_for('static', filename = 'JQuery/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'bootstrap3/js/bootstrap.min.js') }}"></script>
+  </body>      
+</html>

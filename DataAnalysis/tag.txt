@@ -1,0 +1,28 @@
+Python is a dynamically typed programming language.Django is a web application framework for Python.Flask is a web framework for Python based on the Werkzeug toolkit.Ruby is a scripting language designed for simplified object-oriented programming.scikit-learn is a Python module for machine learning.A metalanguage resembling ECMAScript which can be transpiled into a variety of languages.SpaceVim is a community-driven distribution of the vim editor that allows managing your plugins in layers.
+Python is an interpreted high-level programming language for general-purpose programming. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales
+Python features a dynamic type system and automatic memory management. It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library.
+Python interpreters are available for many operating systems. CPython, the reference implementation of Python, is open source software and has a community-based development model, as do nearly all of its variant implementations. CPython is managed by the non-profit Python Software Foundation.
+Beautiful is better than ugly Explicit is better than implicit Simple is better than complex
+Complex is better than complicated Readability counts
+Rather than having all of its functionality built into its core, Python was designed to be highly extensible. This compact modularity has made it particularly popular as a means of adding programmable interfaces to existing applications. Van Rossum's vision of a small core language with a large standard library and easily extensible interpreter stemmed from his frustrations with ABC, which espoused the opposite approach
+Beginner Friendliness
+Python was designed to be easy to understand and fun to use (its name came from Monty Python so a lot of its beginner tutorials reference it). Fun is a great motivator, and since you'll be able to build prototypes and tools quickly with Python, many find coding in Python a satisfying experience. Thus, Python has gained popularity for being a beginner-friendly language, and it has replaced Java as the most popular introductory language at Top U.S. Universities.
+Easy to Understand
+Being a very high level language, Python reads like English, which takes a lot of syntax-learning stress off coding beginners. Python handles a lot of complexity for you, so it is very beginner-friendly in that it allows beginners to focus on learning programming concepts and not have to worry about too much details.
+Very Flexible
+As a dynamically typed language, Python is really flexible. This means there are no hard rules on how to build features, and you'll have more flexibility solving problems using different methods (though the Python philosophy encourages using the obvious way to solve things). Furthermore, Python is also more forgiving of errors, so you'll still be able to compile and run your program until you hit the problematic part.
+Scalability
+Not Easy to Maintain
+Because Python is a dynamically typed language, the same thing can easily mean something different depending on the context. As a Python app grows larger and more complex, this may get difficult to maintain as errors will become difficult to track down and fix, so it will take experience and insight to know how to design your code or write unit tests to ease maintainability.
+Slow
+As a dynamically typed language, Python is slow because it is too flexible and the machine would need to do a lot of referencing to make sure what the definition of something is, and this slows Python performance down.
+At any rate, there are alternatives such as PyPy that are faster implementations of Python. While they might still not be as fast as Java, for example, it certainly improves the speed greatly.
+Community
+As you step into the programming world, you'll soon understand how vital support is, as the developer community is all about giving and receiving help. The larger a community, the more likely you'd get help and the more people will be building useful tools to ease the process of development. 
+5th Largest StackOverflow Community
+StackOverflow is a programming Q&A site you will no doubt become intimate with as a coding beginner. Python has 85.9k followers, with over 500k Python questions. Python questions are also the 3rd most likely to be answered when compared to other popular programming languages.
+3rd Largest Meetup Community
+At meetups, you can generally network and learn from fellow developers. Meetups often offer mentorship to those who want it as well. There are 1300+ Python groups on Meetup.com, totaling 608k+ members. Thus, in terms of programming languages, Python is the 3rd largest community.
+4th Most-Used Language at GitHub
+The more useful projects there are, the more likely someone has already built a function you need and built it well, which will greatly speed up your development process.Over 950 Python projects have over 500 stars.
+Python is also known to have an abundance of libraries that assist with data analysis and scientific computing. In addition, PyGames is a neat game engine to build games with if you want to make simple games.
